@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Teacher Registration
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page13" style="background:url(assets/imgs/final_spitball.jpg) no-repeat center;background-size:cover;">
+  <form id="teacherRegistration-form10">
+    <ion-list id="teacherRegistration-list25">
+      <ion-item id="teacherRegistration-input8">
+        <ion-label>
+          First Name
+        </ion-label>
+        <ion-input type="text" placeholder="" [(ngModel)]="user.firstName" name="firstName"></ion-input>
+      </ion-item>
+      <ion-item id="teacherRegistration-input11">
+        <ion-label>
+          Last Name
+        </ion-label>
+        <ion-input type="text" placeholder="" [(ngModel)]="user.lastName" name="lastName"></ion-input>
+      </ion-item>
+      <ion-item id="teacherRegistration-input9">
+        <ion-label>
+          Email
+        </ion-label>
+        <ion-input type="email" placeholder="" [(ngModel)]="user.email" name="email"></ion-input>
+      </ion-item>
+       <ion-item id="teacherRegistration-item-select1">
+        <ion-label>
+          State
+        </ion-label>
+        <ion-select> 
+             <ion-option>DE</ion-option>
+          <ion-option>PA</ion-option>
+          <ion-option>MD</ion-option>
+        </ion-select>
+        </ion-item>
+      <ion-item id="teacherRegistration-item-select2">
+      <ion-label>
+          School/School District
+      </ion-label>
+        <ion-select> 
+            <ion-option>Red Clay</ion-option>
+            <ion-option>Colonial</ion-option>
+            <ion-option>Christiana</ion-option>
+        </ion-select>
+        <!-- <ion-input type="text" placeholder=""></ion-input> -->
+      </ion-item>
+    </ion-list>
+    <div class="spacer" style="height:100px;" id="teacherRegistration-spacer9"></div>
+    <ion-item id="teacherRegistration-input10">
+      <ion-label>
+        Password
+      </ion-label>
+      <ion-input type="password" placeholder="" [(ngModel)]="user.password" name="password"></ion-input>
+    </ion-item>
+    <ion-item id="teacherRegistration-input14">
+      <ion-label>
+        Verify Password
+      </ion-label>
+      <ion-input type="password" placeholder="" [(ngModel)]="user.verifyPassword" name="verify password"></ion-input>
+    </ion-item>
+    <button id="teacherRegistration-button17" ion-button color="stable" block on-click="register()">
+      Sign up
+    </button>
+  </form>
+</ion-content>

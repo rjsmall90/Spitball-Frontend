@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background:url(assets/imgs/final_spitball.jpg) no-repeat center;background-size:cover;" id="page7">
+  <h1 text-center> Spitball!</h1>
+  <form [formGroup]="formgroup" (ngSubmit)="sendLoginInfo(formgroup.value)">
+    
+    <ion-list id="login-list1">
+      <ion-item id="login-input1">
+        <ion-input type="email" placeholder="Email or Display Name" formControlName="username"></ion-input>
+      </ion-item>
+      <ion-item text-center *ngIf="username.hasError('required') && username.touched">
+        <p> *Please enter your e-mail or display name</p>
+      </ion-item>
+
+      <ion-item text-center>
+        <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+      </ion-item>
+      <ion-item text-center *ngIf="password.hasError('required') && password.touched">
+        <p> *Please enter your password</p>
+      </ion-item>
+    </ion-list>
+   
+<button id="login-button1" type="submit" ion-button color="calm" full >Log in</button>
+
+    <div class="spacer" style="height:20px;" id="login-spacer1"></div>
+  </form>
+
+<form [formGroup]="loginform" (ngSubmit)="sendLoginInfo(loginForm.value)" *ngIf="loginForm">
+
+    <ion-label fixed>Username</ion-label>
+    <input type="text" name="name" formControlName="username">
+
+    <ion-label fixed>Password</ion-label>
+    <input type="text" name="name" formControlName="password">
+
+    <input type="submit" class="cta-btn filled" value="Submit" [disabled]="!loginForm.valid">
+
+</form>
+
+  <button id="login-button2" ion-button color="positive" small icon-left>
+    <ion-icon name="linkedin"></ion-icon>
+    LinkedIn Login
+  </button>
+  <button id="login-button3" ion-button clear color="light" small style="color:#FFFFFF;">
+               
+  </button>
+  <button id="login-button4" ion-button color="energized" small>
+    <ion-icon name="googleplus"></ion-icon>
+    Google + Login
+  </button>
+  <button id="login-button2" ion-button color="assertive" full small on-click="goToUserRegistration()">
+    Create A New Profile!
+  </button>
+  <button id="login-button5" ion-button color="balanced" full small on-click="goToTeacherRegistration()">
+    Register As An Educator!
+  </button>
+</ion-content>

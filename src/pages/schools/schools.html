@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Rate School/Select Teacher!
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding style="background:url(assets/imgs/final_spitball.jpg) no-repeat center;background-size:cover" id="page14">
+  <h1 id="teacherSelectPage-heading5" style="color:#000000;text-align:center;">
+  {{school.name}}
+  </h1>
+      <div #mapsId id="mapsId">
+        This Is Where The Map Will Go
+      </div>
+  <ion-item color="none" id="teacherSelectPage-list-item52">
+      <h2>
+        School Aggregate Score
+      </h2>
+  </ion-item>
+  
+     <rating
+        [(ngModel)]="rate" 
+        id="stars"
+        readOnly="false"
+        max="5"
+        emptyStarIconName="star-outline"
+        halfStarIconName="star-half"
+        starIconName="star"
+        nullable="false"
+        (ngModelChange)="postRating($rate)">
+    </rating>
+
+<ion-item color="white">
+ 
+    <ion-input id="review" placeholder = "Write A Review (optional)" [(ngModel)]="review.review"></ion-input>
+  </ion-item>
+        <button id="" ion-button color="balanced" full on-click="postReview()">
+          Post Review!
+        </button>
+
+
+</ion-content>

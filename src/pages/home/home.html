@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      User Profile
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding style="background:url(assets/imgs/final_spitball.jpg) no-repeat center;background-size:cover;" id="page10">
+  <ion-list id="userProfile-list11">
+    <ion-item color="none" id="userProfile-list-item8">
+      <ion-avatar item-left>
+        <img src="" />
+      </ion-avatar>
+      <h2 style="color:#000000;text-align:center;">
+        Welcome!
+        <!-- {{user.name}} -->
+      </h2>
+    </ion-item>
+  </ion-list>
+  <ion-card id="userProfile-card24">
+    <ion-list>
+      <ion-item color="none" id="userProfile-list-item25">
+        <ion-icon name="school" item-left></ion-icon>
+        Schools Attended/Attending
+      </ion-item>
+      <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">
+        <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>
+      </div>
+      <ion-item id="userProfile-list-item-container13">
+        <div id="userProfile-markdown14" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">
+            Past Three Reviews
+          </p>
+        </div>
+      </ion-item>
+      <ion-list id="userProfile-list14">
+        <ion-item color="none" id="userProfile-list-item30">
+          Most Recent
+        </ion-item>
+        <ion-item color="none" id="userProfile-list-item31">
+          Second Most Recent
+        </ion-item>
+        <ion-item color="none" id="userProfile-list-item32">
+          Third Most Recent
+        </ion-item>
+      </ion-list>
+    </ion-list>
+  </ion-card>
+  <ion-list id="userProfile-list15">
+    <ion-item color="none" id="userProfile-list-item36">
+      <ion-icon name="linkedin" item-left></ion-icon>
+      LinkedIn
+    </ion-item>
+    <ion-item color="none" id="userProfile-list-item37">
+      <ion-icon name="link" item-left></ion-icon>
+      Additional Links
+    </ion-item>
+  </ion-list>
+  <button id="userProfile-button8" ion-button color="balanced" full on-click="goToUpdateProfile()">
+    Edit Profile
+  </button>
+</ion-content>

@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      New Profile
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background:url(assets/imgs/final_spitball.jpg) no-repeat center;background-size:cover;" id="page11">
+  <form id="newProfile-form4">
+    <ion-list id="newProfile-list17">
+      <ion-item id="newProfile-input3">
+        <ion-label>
+          First Name
+        </ion-label>
+        <ion-input type="text" placeholder="" [(ngModel)]="user.firstName" name="firstName"></ion-input>
+      </ion-item>
+      <ion-item id="newProfile-input4">
+        <ion-label>
+          Last Name
+        </ion-label>
+        <ion-input type="text" placeholder="" [(ngModel)]="user.lastName" name="lastName"></ion-input>
+      </ion-item>
+      <ion-item id="newProfile-input12">
+        <ion-label>
+          E-mail
+        </ion-label>
+        <ion-input type="email" placeholder=""[(ngModel)]="user.email" name="email"></ion-input>
+      </ion-item>
+      <form id="newProfile-form6">
+        <ion-item id="newProfile-toggle4">
+          <ion-label>
+            Are You A Parent?
+          </ion-label>
+          <ion-toggle color="positive" checked="false"></ion-toggle>
+        </ion-item>
+        <ion-item id="newProfile-toggle5">
+          <ion-label>
+            Are You A Student?
+          </ion-label>
+          <ion-toggle color="positive" checked="false"></ion-toggle>
+        </ion-item>
+        <ion-item id="newProfile-input6">
+          <ion-label>
+            Username
+          </ion-label>
+          <ion-input type="text" placeholder="optional" [(ngModel)]="user.username" name="username" required minlength="5" maxlength="8"></ion-input>
+        </ion-item>
+        <div class="spacer" style="width:299.531px;height:12.9688px;" id="newProfile-spacer5"></div>
+        <div id="newProfile-markdown17" class="show-list-numbers-and-dots">
+          <p style="color:#FF0303;font-size:-1px;">
+            If under the age of 13, tell yo momma, or yo daddy ...if he&#39;s still there ...mines wasn&#39;t T^T
+          </p>
+        </div>
+      </form>
+      <ion-item id="newProfile-input5">
+        <ion-label>
+          Password
+        </ion-label>
+        <ion-input type="password" placeholder="" [(ngModel)]="user.password" name="password"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-item id="newProfile-input13">
+      <ion-label>
+        Verify Password
+      </ion-label>
+      <ion-input type="password" placeholder="" [(ngModel)]="user.verifyPassword" name="verify password"></ion-input>
+    </ion-item>
+    <div class="spacer" style="width:299.514px;height:55.9757px;" id="newProfile-spacer4"></div>
+    <button id="newProfile-button9" ion-button color="balanced" full on-click="register()">
+      Get Started!
+    </button>
+  </form>
+</ion-content>
