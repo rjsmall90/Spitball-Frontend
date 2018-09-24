@@ -44,6 +44,7 @@ export class SearchPage {
     goToSchoolPage(school: School){
     
     this.crud.post("/schools/post", this.school, after =>  {
+        
          });
     this.navCtrl.push(SchoolPage, {
         school: school

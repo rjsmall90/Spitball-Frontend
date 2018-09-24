@@ -8,7 +8,6 @@ import { NewProfilePage } from './../../pages/registerUser/registerUser';
 import { TeacherRegistrationPage } from './../../pages/registerTeacher/registerTeacher';
 
 
-
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html'
@@ -37,10 +36,11 @@ export class LoginPage {
   sendLoginInfo(loginForm){
         this.userLogin.login(loginForm.username, loginForm.password, result =>{
         if(result.status == 200){
-        console.log("Success!");
-        this.userLogin.setToken(result.headers.get("authorization"));
-        console.log(this.userLogin.getToken());
-        this.navCtrl.setRoot(HomePage);
+          console.log(result.headers.authorization);
+          console.log("Success!");
+          console.log(result.headers);
+          this.userLogin.setToken(result.headers.get("authorization"));
+          this.navCtrl.setRoot(HomePage);
 
 
       } else {

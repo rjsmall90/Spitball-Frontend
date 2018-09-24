@@ -42,6 +42,7 @@ post(partialPath: string, data: any, callback) {
     'Authorization': this.userLogin.getToken(),
     'Content-Type': 'application/json'
   });
+
   let options = new RequestOptions({headers: header});
 
  this.http.post(url, data, options).subscribe( (result : Response) => {

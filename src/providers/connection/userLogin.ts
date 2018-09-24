@@ -21,7 +21,10 @@ export class UserLoginProvider {
 
   getToken(){return this.token}
 
-  setToken(token: string){this.token = token}
+  setToken(token: string){
+    console.log(token);
+    this.token = token;
+  }
   
   login(username, password, callback){
    
@@ -39,8 +42,8 @@ export class UserLoginProvider {
     };
  
     this.http.post(url, body, options).subscribe( result => {
+      console.log(result.headers.get("authorization"));
       callback(result);
-      //console.log(result.headers.get("authorization"));
     })
   }
 
